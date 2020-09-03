@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
-import useStyles from "./IndexCss";
+import useStyles from "./IndexStyles";
 
 export default function IndexContent() {
 
@@ -35,38 +35,49 @@ export default function IndexContent() {
   }
 
   function zoomIn() {
-    setStyle("zoom-in");
+    setStyle(classes.zoomin);
   }
 
   function zoomOut() {
-    setStyle("zoom-out");
+    setStyle(classes.zoomout);
   }
 
   function leftIn() {
-    setStyle("left-in");
+    setStyle(classes.leftin);
   }
 
   function rightIn() {
-    setStyle("right-in");
+    setStyle(classes.rightin);
   }
 
   function topBot() {
-    setStyle("top-bot");
+    setStyle(classes.topbot);
   }
 
   function flash() {
-    setStyle("flash");
+    setStyle(classes.flash);
   }
 
   function bounce() {
-    setStyle("bounce");
+    setStyle(classes.bounce);
   }
+
+  const boxStyle = {
+    marginTop:"8px",
+    marginBottom:"8px",
+    display:"flex",
+    justifyContent:"center",
+    paddingTop:"3rem",
+    paddingBottom:"3rem",
+    borderRadius:"2rem",
+    borderColor:"orange",
+    overflow:"hidden"
+  };
 
   return (
     <Grid container direction="column" justify="center" alignItems="center">
       <>
-        <Box my={1} display="flex" flexDirection="row" justifyContent="center" py={6}
-             border={1} borderRadius={5} borderColor="orange" boxShadow={2}>
+        <Box border={1} boxShadow={2} flexDirection="row" style={boxStyle}>
 
           <img className={style} style={{"width":"25%"}}
                src="/images/image.png" onAnimationEnd={handleAnimationEnd} alt="rleft">

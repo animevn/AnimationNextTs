@@ -76,18 +76,62 @@ const useStyles = makeStyles(()=>createStyles({
     animationTimingFunction:"linear"
   },
 
+  "@keyframes leftIn":{
+    "0%":{transform:"translateX(-100%)"},
+    "100%":{transform:"translateX(0%)"}
+  },
 
+  leftin:{
+    animation:`$leftIn`,
+    animationDuration:"2s",
+    animationTimingFunction:"linear"
+  },
 
+  "@keyframes rightIn":{
+    "0%":{transform:"translateX(100%)"},
+    "100%":{transform:"translateX(0%)"}
+  },
 
+  rightin:{
+    animation:`$rightIn`,
+    animationDuration:"2s",
+    animationTimingFunction:"linear"
+  },
 
+  "@keyframes topBot":{
+    "0%":{transform:"translateY(-100%)"},
+    "100%":{transform:"translateY(0%)"}
+  },
 
+  topbot:{
+    animation:`$topBot`,
+    animationDuration:"2s",
+    animationTimingFunction:"linear"
+  },
 
+  "@keyframes flashing":{
+    "0%":{filter:"opacity(100%)"},
+    "100%":{filter:"opacity(0%)"}
+  },
 
+  flash:{
+    animation:`$flashing`,
+    animationDuration:"0.1s",
+    animationTimingFunction:"linear",
+    animationIterationCount:10
+  },
 
+  "@keyframes bouncing":{
+    "0%, 20%, 50%, 80%, 100%":{transform:"translateY(0)"},
+    "40%":{transform:"translateY(-30px)"},
+    "60%":{transform:"translateY(-15px)"}
+  },
 
-
-
-
+  bounce:{
+    animation:`$bouncing`,
+    animationDuration:"2s",
+    animationTimingFunction:"linear"
+  }
 
 }));
 
